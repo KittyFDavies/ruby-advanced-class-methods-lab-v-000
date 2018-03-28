@@ -50,7 +50,7 @@ class Song
     info = filename.split(" - ")
     songs = info.collect do |data|
       song_name = data[0]
-      a_name = data[1].sub /.mp3/, ''
+      a_name = data[1].sub(/.mp3/, '')
       song = self.new # This is an important line.
       song.name = song_name
       song.artist_name = a_name
