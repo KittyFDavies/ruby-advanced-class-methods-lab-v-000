@@ -45,16 +45,14 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    info = filename.split(" - ")
-    songs = info.collect do |data|
-      song_name = data
-      a_name = info[1].sub(/.mp3/,'')
+    song = filename.split(" - ")
+      song_name = song[0]
+      a_name = song[1].sub(/.mp3/,'')
       binding.pry
       song = self.new # This is an important line.
       song.name = song_name
       song.artist_name = a_name
       song
-    end
     songs
   end
 
