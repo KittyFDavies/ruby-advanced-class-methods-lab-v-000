@@ -48,7 +48,7 @@ class Song
     info = filename.split(" - ")
     songs = info.collect do |data|
       song_name = data
-      a_name = data.sub(/.mp3/,'')
+      a_name = info[1].sub(/.mp3/,'')
       binding.pry
       song = self.new # This is an important line.
       song.name = song_name
