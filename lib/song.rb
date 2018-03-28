@@ -46,9 +46,9 @@ class Song
 
   def self.new_from_filename(filename)
     info = filename.split(" - ")
+    binding.pry
     songs = info.collect do |data|
       song_name = data[0]
-      binding.pry
       a_name = data[1].sub(/.mp3/,'')
       song = self.new # This is an important line.
       song.name = song_name
