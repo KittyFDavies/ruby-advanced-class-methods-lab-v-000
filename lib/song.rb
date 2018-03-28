@@ -48,7 +48,6 @@ class Song
     info = filename.split(" - ")
     song_name = info[0]
     a_name = info[1].sub(/.mp3/,'')
-    binding.pry
     song = self.new # This is an important line.
     song.name = song_name
     song.artist_name = a_name
